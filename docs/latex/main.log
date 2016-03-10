@@ -1,48 +1,48 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.6.1)  15 JUN 2015 13:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.11.23)  29 FEB 2016 11:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
-LaTeX2e <2014/05/01>
-Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+LaTeX2e <2015/10/01> patch level 2
+Babel <3.9m> and hyphenation patterns for 79 languages loaded.
 \@input{meta/layout.aux}
 \openout2 = `meta/layout.aux'.
 
 (./meta/layout.tex (/usr/share/texmf-dist/tex/latex/koma-script/scrreprt.cls
-Document Class: scrreprt 2015/02/07 v3.16 KOMA-Script document class (report)
+Document Class: scrreprt 2015/10/03 v3.19a KOMA-Script document class (report)
 (/usr/share/texmf-dist/tex/latex/koma-script/scrkbase.sty
-Package: scrkbase 2015/02/07 v3.16 KOMA-Script package (KOMA-Script-dependent b
-asics and keyval usage)
+Package: scrkbase 2015/10/03 v3.19a KOMA-Script package (KOMA-Script-dependent 
+basics and keyval usage)
 
 (/usr/share/texmf-dist/tex/latex/koma-script/scrbase.sty
-Package: scrbase 2015/02/07 v3.16 KOMA-Script package (KOMA-Script-independent 
-basics and keyval usage)
+Package: scrbase 2015/10/03 v3.19a KOMA-Script package (KOMA-Script-independent
+ basics and keyval usage)
 
 (/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
 (/usr/share/texmf-dist/tex/latex/koma-script/scrlfile.sty
-Package: scrlfile 2015/02/07 v3.16 KOMA-Script package (loading files)
+Package: scrlfile 2015/10/03 v3.19a KOMA-Script package (loading files)
 
-Package scrlfile, 2015/02/07 v3.16 KOMA-Script package (loading files)
+Package scrlfile, 2015/10/03 v3.19a KOMA-Script package (loading files)
                   Copyright (C) Markus Kohm
 
 ))) (/usr/share/texmf-dist/tex/latex/koma-script/tocbasic.sty
-Package: tocbasic 2015/02/07 v3.16 KOMA-Script package (handling toc-files)
+Package: tocbasic 2015/10/03 v3.19a KOMA-Script package (handling toc-files)
 )
 Package tocbasic Info: omitting babel extension for `toc'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `toc' on input line 118.
+(tocbasic)             for `toc' on input line 125.
 Package tocbasic Info: omitting babel extension for `lof'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lof' on input line 119.
+(tocbasic)             for `lof' on input line 126.
 Package tocbasic Info: omitting babel extension for `lot'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lot' on input line 120.
-Package tocbasic Info: defining new hook before heading of `' on input line 118
-0.
+(tocbasic)             for `lot' on input line 127.
+Package tocbasic Info: defining new hook before heading of `' on input line 158
+8.
 Package scrreprt Info: You've used standard option `12pt'.
 (scrreprt)             This is correct!
 (scrreprt)             Internally I'm using `fontsize=12pt'.
@@ -82,15 +82,15 @@ Class scrreprt Info: You've used standard option `abstracton'.
 (scrreprt)           you'd have to use `abstract=true' there
 (scrreprt)           instead of `abstracton', too.
 Class scrreprt Info: File `scrsize12pt.clo' used to setup font sizes on input l
-ine 1712.
+ine 2248.
 (/usr/share/texmf-dist/tex/latex/koma-script/scrsize12pt.clo
-File: scrsize12pt.clo 2015/02/07 v3.16 KOMA-Script font size class option (12pt
-)
+File: scrsize12pt.clo 2015/10/03 v3.19a KOMA-Script font size class option (12p
+t)
 )
 (/usr/share/texmf-dist/tex/latex/koma-script/typearea.sty
-Package: typearea 2015/02/07 v3.16 KOMA-Script package (type area)
+Package: typearea 2015/10/03 v3.19a KOMA-Script package (type area)
 
-Package typearea, 2015/02/07 v3.16 KOMA-Script package (type area)
+Package typearea, 2015/10/03 v3.19a KOMA-Script package (type area)
                   Copyright (C) Frank Neukam, 1992-1994
                   Copyright (C) Markus Kohm, 1994-
 
@@ -122,7 +122,7 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 12.0pt
 (typearea)              \footskip       = 50.75pt
 (typearea)              \baselineskip   = 14.5pt
-(typearea)              on input line 1342.
+(typearea)              on input line 1509.
 )
 \c@part=\count80
 \c@chapter=\count81
@@ -131,6 +131,7 @@ Package typearea Info: These are the values describing the layout:
 \c@subsubsection=\count84
 \c@paragraph=\count85
 \c@subparagraph=\count86
+LaTeX Info: Redefining \textsubscript on input line 4652.
 \abovecaptionskip=\skip46
 \belowcaptionskip=\skip47
 \c@pti@nb@sid@b@x=\box26
@@ -138,22 +139,24 @@ Package typearea Info: These are the values describing the layout:
 \c@table=\count88
 \bibindent=\dimen102
 ) (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2014/04/30 v1.2b Input encoding file
+Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
 
 (/usr/share/texmf-dist/tex/latex/base/utf8.def
-File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
+File: utf8.def 2015/09/07 v1.1p UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
 (/usr/share/texmf-dist/tex/latex/base/t1enc.dfu
-File: t1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+File: t1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00AD (decimal 173)
    defining Unicode char U+00BB (decimal 187)
    defining Unicode char U+00BF (decimal 191)
    defining Unicode char U+00C0 (decimal 192)
@@ -274,6 +277,10 @@ File: t1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+016F (decimal 367)
    defining Unicode char U+0170 (decimal 368)
    defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
    defining Unicode char U+0178 (decimal 376)
    defining Unicode char U+0179 (decimal 377)
    defining Unicode char U+017A (decimal 378)
@@ -281,6 +288,10 @@ File: t1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+017C (decimal 380)
    defining Unicode char U+017D (decimal 381)
    defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
    defining Unicode char U+200C (decimal 8204)
    defining Unicode char U+2013 (decimal 8211)
    defining Unicode char U+2014 (decimal 8212)
@@ -300,9 +311,11 @@ Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
 (/usr/share/texmf-dist/tex/latex/base/ot1enc.dfu
-File: ot1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+File: ot1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AD (decimal 173)
    defining Unicode char U+00B8 (decimal 184)
    defining Unicode char U+00BF (decimal 191)
    defining Unicode char U+00C5 (decimal 197)
@@ -320,6 +333,14 @@ File: ot1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+0142 (decimal 322)
    defining Unicode char U+0152 (decimal 338)
    defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
    defining Unicode char U+2013 (decimal 8211)
    defining Unicode char U+2014 (decimal 8212)
    defining Unicode char U+2018 (decimal 8216)
@@ -331,7 +352,7 @@ Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
 (/usr/share/texmf-dist/tex/latex/base/omsenc.dfu
-File: omsenc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+File: omsenc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -359,7 +380,7 @@ Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
 (/usr/share/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
-LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
 (/usr/share/texmf-dist/tex/latex/ae/ae.sty
 Package: ae 2001/02/12 1.3 Almost European Computer Modern
@@ -369,9 +390,9 @@ Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
 (/usr/share/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
-LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 )
-LaTeX Font Info:    Try loading font information for T1+aer on input line 100.
+LaTeX Font Info:    Try loading font information for T1+aer on input line 105.
 
 (/usr/share/texmf-dist/tex/latex/ae/t1aer.fd
 File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
@@ -411,8 +432,8 @@ Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Bdimen=\dimen105
 \calc@Askip=\skip48
 \calc@Bskip=\skip49
-LaTeX Info: Redefining \setlength on input line 75.
-LaTeX Info: Redefining \addtolength on input line 76.
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count91
 \calc@Cskip=\skip50
 )
@@ -422,7 +443,7 @@ Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
 (/usr/share/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 137.
+Package color Info: Driver file: pdftex.def on input line 142.
 
 (/usr/share/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
@@ -471,7 +492,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 Package: mdwlist 1996/05/02 1.1 Various list-related things
 )
 (/usr/share/texmf-dist/tex/latex/koma-script/scrdate.sty
-Package: scrdate 2015/02/07 v3.16 KOMA-Script package (day of the week)
+Package: scrdate 2015/10/03 v3.19a KOMA-Script package (day of the week)
 Package scrdate Info: Language austrian not defined.
 (scrdate)             \dayname@austrian skipped.
 Package scrdate Info: Language nswissgerman not defined.
@@ -488,10 +509,10 @@ Package scrdate Info: Language canadien not defined.
 (scrdate)             \dayname@canadien skipped.
 )
 (/usr/share/texmf-dist/tex/latex/koma-script/scrtime.sty
-Package: scrtime 2015/02/07 v3.16 KOMA-Script package (time of LaTeX run)
+Package: scrtime 2015/10/03 v3.19a KOMA-Script package (time of LaTeX run)
 )
 (/usr/share/texmf-dist/tex/latex/koma-script/scrpage2.sty
-Package: scrpage2 2015/02/07 v3.16 KOMA-Script package (page head and foot)
+Package: scrpage2 2015/10/03 v3.19a KOMA-Script package (page head and foot)
 LaTeX Info: Redefining \pagemark on input line 174.
 )
 (/usr/share/texmf-dist/tex/latex/booktabs/booktabs.sty
@@ -537,7 +558,7 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \bigstrutjot=\dimen127
 )
 (/usr/share/texmf-dist/tex/latex/tools/multicol.sty
-Package: multicol 2014/10/28 v1.8i multicolumn formatting (FMi)
+Package: multicol 2015/08/19 v1.8n multicolumn formatting (FMi)
 \c@tracingmulticols=\count102
 \mult@box=\box32
 \multicol@leftmargin=\dimen128
@@ -600,15 +621,15 @@ Package: multicol 2014/10/28 v1.8i multicolumn formatting (FMi)
 \lst@maxwidth=\dimen140
 
 (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 \c@lstnumber=\count117
 \lst@skipnumbers=\count118
 \lst@framebox=\box59
 )
 (/usr/share/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2014/09/06 1.5e listings configuration
+File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
-Package: listings 2014/09/06 1.5e (Carsten Heinz)
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
 (/usr/share/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
@@ -640,7 +661,7 @@ Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
 (/usr/share/texmf-dist/tex/latex/todonotes/todonotes.sty
-Package: todonotes 2012/07/25 .dtx Todonotes source and documentation.
+Package: todonotes 2015/07/09 .dtx Todonotes source and documentation.
 Package: todonotes 2012/07/25
 
 (/usr/share/texmf-dist/tex/latex/base/ifthen.sty
@@ -673,9 +694,9 @@ File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
 (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
-Package: pgfrcs 2013/12/20 v3.0.0 (rcs-revision 1.28)
+Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
 ))
-Package: pgf 2013/12/18 v3.0.0 (rcs-revision 1.14)
+Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
 
 (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
 (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
@@ -690,14 +711,14 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 (/usr/share/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 94.
 )
 \Gin@req@height=\dimen143
 \Gin@req@width=\dimen144
 )
 (/usr/share/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
 (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
-Package: pgfsys 2013/11/30 v3.0.0 (rcs-revision 1.47)
+Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 
 (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks30
@@ -730,7 +751,7 @@ File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 Driver file for pgf: pgfsys-pdftex.def
 
 (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
-File: pgfsys-pdftex.def 2013/07/18  (rcs-revision 1.33)
+File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
 
 (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
 File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
@@ -744,7 +765,7 @@ File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
 ))
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
-Package: pgfcore 2010/04/11 v3.0.0 (rcs-revision 1.7)
+Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
@@ -791,24 +812,24 @@ File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
 \pgf@path@lastx=\dimen168
 \pgf@path@lasty=\dimen169
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
-File: pgfcorepathusage.code.tex 2013/12/13  (rcs-revision 1.23)
+File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
 \pgf@shorten@end@additional=\dimen170
 \pgf@shorten@start@additional=\dimen171
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
-File: pgfcorescopes.code.tex 2013/10/09  (rcs-revision 1.44)
+File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box62
 \pgf@hbox=\box63
 \pgf@layerbox@main=\box64
 \pgf@picture@serial@count=\count129
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
-File: pgfcoregraphicstate.code.tex 2013/09/19  (rcs-revision 1.11)
+File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
 \pgflinewidth=\dimen172
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.t
 ex
-File: pgfcoretransformations.code.tex 2013/10/10  (rcs-revision 1.17)
+File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
 \pgf@pt@x=\dimen173
 \pgf@pt@y=\dimen174
 \pgf@pt@temp=\dimen175
@@ -822,7 +843,7 @@ File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
 x
 File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
-File: pgfcorearrows.code.tex 2013/11/07  (rcs-revision 1.40)
+File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 \pgfarrowsep=\dimen176
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
@@ -834,7 +855,7 @@ File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
-File: pgfcoreexternal.code.tex 2013/07/15  (rcs-revision 1.20)
+File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
 \pgfexternal@startupbox=\box65
 ))
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
@@ -846,19 +867,19 @@ File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
 File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 )))
 (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
-File: pgfmoduleshapes.code.tex 2013/10/31  (rcs-revision 1.34)
+File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
 \pgfnodeparttextbox=\box66
 )
 (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
-File: pgfmoduleplot.code.tex 2013/07/31  (rcs-revision 1.12)
+File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 )
 (/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
-Package: pgfcomp-version-0-65 2007/07/03 v3.0.0 (rcs-revision 1.7)
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
 \pgf@nodesepstart=\dimen178
 \pgf@nodesepend=\dimen179
 )
 (/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
-Package: pgfcomp-version-1-18 2007/07/23 v3.0.0 (rcs-revision 1.1)
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 ))
 (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
 (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
@@ -866,7 +887,7 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.0 (rcs-revision 1.1)
 (/usr/share/texmf-dist/tex/latex/pgf/math/pgfmath.sty
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
 (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
-Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
+Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
 \pgffor@iter=\dimen180
@@ -875,11 +896,11 @@ Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
 \pgffor@toks=\toks40
 ))
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
-Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
+Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 
 (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.te
 x
-File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \pgf@plot@mark@count=\count131
 \pgfplotmarksize=\dimen182
 )
@@ -907,11 +928,11 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 topaths.code.tex
-File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 )))
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 positioning.code.tex
-File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.0 (rcs-revision 1.7)
+File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
 )
 \c@@todonotes@numberoftodonotes=\count140
 ) (/usr/share/texmf-dist/tex/generic/thumbpdf/thumbpdf.sty
@@ -1039,10 +1060,10 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \c@satz=\count152
 
 (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2014/09/06 1.5e listings language file
+File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2014/09/06 1.5e listings language file
+File: lstlang2.sty 2015/06/04 1.6 listings language file
 ))
 
 LaTeX Warning: Unused global option(s):
@@ -1258,6 +1279,7 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 
 
 
+
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./img/TUC_deutsch_einzeile
 _CMYK.pdf>] [2
 
@@ -1315,7 +1337,7 @@ l für die NED-Integration[][] [][]
 
 
 ]) (./chapters/einleitung.tex
-Kapitel 1.
+chapter 1.
 
 Class scrreprt Warning: \float@addtolists detected!
 (scrreprt)              Implementation of \float@addtolist became
@@ -1348,7 +1370,7 @@ l.1 \chapter
 
 
 ]
-Kapitel 2.
+chapter 2.
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -1408,7 +1430,7 @@ ng>] [11] [12
 
 
 ]
-Kapitel 3.
+chapter 3.
 [13] [14]
 Overfull \hbox (6.7693pt too wide) in alignment at lines 66--66
 [][][][][] 
@@ -1457,13 +1479,13 @@ Overfull \hbox (14.02925pt too wide) in alignment at lines 273--273
  []
 
 [23] (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2014/09/06 1.5e listings language file
+File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2014/09/06 1.5e listings language file
+File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
 <img/statWrong.pdf, id=471, 800.68036pt x 422.42516pt>
 File: img/statWrong.pdf Graphic file (type pdf)
@@ -1494,7 +1516,7 @@ o-or-di-na-ten im 3-dimensionalen
 
 
 ]
-Kapitel 4.
+chapter 4.
 
 Overfull \hbox (17.79706pt too wide) in alignment at lines 35--35
 [][] 
@@ -1507,14 +1529,14 @@ Overfull \hbox (8.96613pt too wide) in paragraph at lines 110--114
  []
 
 [35] [36] [37] [38] [39]
-<img/switchingModes5000.pdf, id=739, 290.85864pt x 116.65582pt>
-File: img/switchingModes5000.pdf Graphic file (type pdf)
+<img/switchingModes5000.png, id=739, 738.76pt x 296.307pt>
+File: img/switchingModes5000.png Graphic file (type png)
 
-<use img/switchingModes5000.pdf>
-Package pdftex.def Info: img/switchingModes5000.pdf used on input line 249.
+<use img/switchingModes5000.png>
+Package pdftex.def Info: img/switchingModes5000.png used on input line 249.
 (pdftex.def)             Requested size: 431.05931pt x 172.89354pt.
- [40 <./img/switchingModes5000.pdf>] [41]
-<img/SimpleClasses.png, id=794, 103.587pt x 117.43875pt>
+ [40 <./img/switchingModes5000.png>] [41]
+<img/SimpleClasses.png, id=790, 103.587pt x 117.43875pt>
 File: img/SimpleClasses.png Graphic file (type png)
 
 <use img/SimpleClasses.png>
@@ -1526,65 +1548,65 @@ Overfull \hbox (8.12608pt too wide) in paragraph at lines 334--335
 ndard-Nachrichtenklasse
  []
 
-<img/ExtendedMessage.png, id=815, 110.21175pt x 215.3646pt>
+<img/ExtendedMessage.png, id=810, 110.21175pt x 215.3646pt>
 File: img/ExtendedMessage.png Graphic file (type png)
 
 <use img/ExtendedMessage.png>
 Package pdftex.def Info: img/ExtendedMessage.png used on input line 339.
 (pdftex.def)             Requested size: 110.21147pt x 215.36406pt.
  [43 <./img/ExtendedMessage.png>] [44] [45]
-[46] <img/SensorModel.png, id=876, 245.75395pt x 389.39508pt>
+[46] <img/SensorModel.png, id=871, 245.75395pt x 389.39508pt>
 File: img/SensorModel.png Graphic file (type png)
 
 <use img/SensorModel.png>
 Package pdftex.def Info: img/SensorModel.png used on input line 484.
 (pdftex.def)             Requested size: 129.3191pt x 204.90486pt.
  [47] [48 <./img/SensorModel.png>]
-<img/Sensornode.png, id=893, 364.76575pt x 410.96822pt>
+<img/Sensornode.png, id=888, 364.76575pt x 410.96822pt>
 File: img/Sensornode.png Graphic file (type png)
 
 <use img/Sensornode.png>
 Package pdftex.def Info: img/Sensornode.png used on input line 517.
 (pdftex.def)             Requested size: 301.74019pt x 339.96849pt.
  [49] [50 <./img/Sensornode.png>] [51] [52] [53]
-[54] [55] <img/sensorExampleEvents.png, id=985, 1048.63411pt x 485.03596pt>
+[54] [55] <img/sensorExampleEvents.png, id=979, 1048.63411pt x 485.03596pt>
 File: img/sensorExampleEvents.png Graphic file (type png)
 
 <use img/sensorExampleEvents.png>
 Package pdftex.def Info: img/sensorExampleEvents.png used on input line 696.
 (pdftex.def)             Requested size: 431.05931pt x 199.3767pt.
 
-<img/startMeasuring.png, id=986, 816.90268pt x 382.02425pt>
+<img/startMeasuring.png, id=980, 816.90268pt x 382.02425pt>
 File: img/startMeasuring.png Graphic file (type png)
 
 <use img/startMeasuring.png>
 Package pdftex.def Info: img/startMeasuring.png used on input line 702.
 (pdftex.def)             Requested size: 431.05931pt x 201.58585pt.
  [56] [57] [58 <./img/sensorExampleEvents.png> <./img/startMeasuring.png>]
-<img/sleepVsNoSleepPowerModes.pdf, id=1025, 290.85864pt x 116.65582pt>
-File: img/sleepVsNoSleepPowerModes.pdf Graphic file (type pdf)
+<img/sleepVsNoSleepPowerModes.png, id=1020, 738.76pt x 296.307pt>
+File: img/sleepVsNoSleepPowerModes.png Graphic file (type png)
 
-<use img/sleepVsNoSleepPowerModes.pdf>
-Package pdftex.def Info: img/sleepVsNoSleepPowerModes.pdf used on input line 74
+<use img/sleepVsNoSleepPowerModes.png>
+Package pdftex.def Info: img/sleepVsNoSleepPowerModes.png used on input line 74
 6.
 (pdftex.def)             Requested size: 431.05931pt x 172.89354pt.
 
-<img/sleepVsNoSleepResRel.pdf, id=1026, 738.84229pt x 296.34012pt>
-File: img/sleepVsNoSleepResRel.pdf Graphic file (type pdf)
+<img/sleepVsNoSleepResRel.png, id=1021, 738.76pt x 296.307pt>
+File: img/sleepVsNoSleepResRel.png Graphic file (type png)
 
-<use img/sleepVsNoSleepResRel.pdf>
-Package pdftex.def Info: img/sleepVsNoSleepResRel.pdf used on input line 753.
-(pdftex.def)             Requested size: 431.05931pt x 172.89478pt.
- [59] [60 <./img/sleepVsNoSleepPowerModes.pdf> <./img/sleepVsNoSleepResRel.pdf>
+<use img/sleepVsNoSleepResRel.png>
+Package pdftex.def Info: img/sleepVsNoSleepResRel.png used on input line 753.
+(pdftex.def)             Requested size: 431.05931pt x 172.89354pt.
+ [59] [60 <./img/sleepVsNoSleepPowerModes.png> <./img/sleepVsNoSleepResRel.png>
 ]
-<img/outOfSync.pdf, id=1051, 73.40816pt x 70.56282pt>
-File: img/outOfSync.pdf Graphic file (type pdf)
- <use img/outOfSync.pdf>
-Package pdftex.def Info: img/outOfSync.pdf used on input line 766.
-(pdftex.def)             Requested size: 215.52965pt x 207.17976pt.
+<img/outOfSync.png, id=1036, 310.761pt x 298.716pt>
+File: img/outOfSync.png Graphic file (type png)
+ <use img/outOfSync.png>
+Package pdftex.def Info: img/outOfSync.png used on input line 766.
+(pdftex.def)             Requested size: 215.52965pt x 207.18083pt.
 )
-(./chapters/zusammenfassung.tex [61 <./img/outOfSync.pdf>] [62]
-Kapitel 5.
+(./chapters/zusammenfassung.tex [61 <./img/outOfSync.png>] [62]
+chapter 5.
 [63
 
 
@@ -1592,7 +1614,9 @@ Kapitel 5.
 (./formalLayout/literaturverzeichnis.tex (./main.bbl [65] [66
 
 
-] [67]
+]
+chapter without number
+[67]
 
 Class scrreprt Warning: Usage of deprecated font command `\sc'!
 (scrreprt)              You should note, that in 1994 font command `\sc' has
@@ -1916,13 +1940,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 56.
  ) 
 Here is how much of TeX's memory you used:
- 22812 strings out of 493109
- 404632 string characters out of 6140857
- 914070 words of memory out of 5000000
- 25167 multiletter control sequences out of 15000+600000
+ 23054 strings out of 493054
+ 409863 string characters out of 6140585
+ 932852 words of memory out of 5000000
+ 25467 multiletter control sequences out of 15000+600000
  50983 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,18n,99p,991b,1937s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 77i,18n,99p,998b,1939s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/publ
@@ -1937,10 +1961,10 @@ pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share
 nts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/urw/zapfding/uzdr.
 pfb>
-Output written on main.pdf (82 pages, 6601142 bytes).
+Output written on main.pdf (82 pages, 5952321 bytes).
 PDF statistics:
- 1333 PDF objects out of 1440 (max. 8388607)
- 1179 compressed objects within 12 object streams
+ 1313 PDF objects out of 1440 (max. 8388607)
+ 1163 compressed objects within 12 object streams
  563 named destinations out of 1000 (max. 500000)
  337 words of extra memory for PDF output out of 10000 (max. 10000000)
 

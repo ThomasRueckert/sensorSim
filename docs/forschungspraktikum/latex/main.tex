@@ -1,0 +1,47 @@
+%%==========================================================================================
+%% Dokumenten- & Seitenlayout
+%%==========================================================================================
+\include{meta/layout}
+
+
+\begin{document}
+	%%========================================================================================
+	%% Variablen, \hypersetup, etc
+	%%========================================================================================
+	\include{meta/metadaten}
+	
+	%%========================================================================================
+	%% formaler Aufbau - Anfang
+	%%========================================================================================
+	\input{formalLayout/titel} 
+	\input{formalLayout/abstract} 
+	\input{formalLayout/inhaltsverzeichnis}
+	\input{formalLayout/abbildungsverzeichnis}
+	%\input{formalLayout/tabellenverzeichnis}
+	%\input{formalLayout/algorithmenverzeichnis}
+	%\input{formalLayout/abkuerzungsverzeichnis}
+	
+	%%========================================================================================
+	%% Verzeichnissauflistung mit weißer Seite abschließen und danach Seitennummerierung bei 1
+	%%========================================================================================
+	\input{formalLayout/chapterInitilisation}
+	
+	%%========================================================================================	
+	%% I N H A L T 	
+	%%========================================================================================
+	\input{chapters/einleitung}
+    \input{chapters/vorbetrachtungen}
+	\input{chapters/anforderungen}
+	\input{chapters/implementierung}
+    \input{chapters/auswertung}
+    \input{chapters/zusammenfassung}
+	
+	%%========================================================================================	
+	%% formaler Aufbau - Ende 
+	%%========================================================================================
+    %\input{formalLayout/arbeitsaufteilung}
+	\input{formalLayout/glossar}
+	\input{formalLayout/literaturverzeichnis}
+	\input{formalLayout/selbststaendigkeitserklaerung}
+	\input{formalLayout/anhang}
+\end{document}

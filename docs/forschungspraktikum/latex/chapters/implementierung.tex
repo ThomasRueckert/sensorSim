@@ -1,0 +1,42 @@
+\chapter{Implementierung}
+
+\section{Hardware}
+
+Für die Testanwendungen wurde ein Knoten definiert, welcher am DicePhyMacHost aus dem Modul Applicationclustering orientiert ist. Dieser wiederum erbt vom Mixim-Knoten WirelessNodeBatteryNetwl. Er beinhaltet sowohl den Funktransreceiver\\
+ Nic802154\_TI\_CC2420A, als auch eine Batteriemodul. \\
+ Der Sensor\_Wakeup\_DicePhyMacHost enthält zusätzlich dazu die Sensorik aus dem Modul SensorTechnology, welchem im nächsten Abschnitt erläutert wird. Außerdem wurde der Nic802154\_TI\_CC2420A durch den Receiver \\
+ Wakeup\_Nic802154\_TI\_CC2420A ersetzt, welcher neben der Standardfunktionalität des Funktransceiver auch noch einen Wakeupreceiver implementiert. Dafür wurde das Modul WakeUpRecv verwendet.
+
+\subsection{Sensorik}
+
+Das Modul SensorTechnology wurde in der Bachelorarbeit \textit{Modellierung und Integration von Sensorknoten in einer Simulationsumgebung} implementiert. Es stellt die Hardware für die Simulation von der Sensorik bereit, das beinhaltet einen Speicher, einen Prozessor und vier unterschiedliche Sensoren. Der Energieverbrauch der Hardware kann modular definiert werden, es benötigt daher auch eine Energiequelle. Der letzte Teil des Moduls ist eine Umgebung für die Sensorik, welche die BaseWorldUtility aus dem Mixim-Modul um Sensormesswerte erweitert.
+
+\subsection{Wakeupreceiver}
+
+Nic802154 TI CC2420\\
+erweitert um wakeupreceiver
+
+
+\section{Transportlayer}
+\subsection{Baum}
+CustomWiseRoute\\
+ClusterApplWiseRoute
+\subsection{Application Clustering}
+
+\section{Applicationlayer}
+
+\paragraph{Für Szenario 1} wird der Application-Layer NoApplicationClusteringAppl verwendet. Dieser erbt von der CustomMatrixApplication. Diese wurde jedoch noch um  Sensorfunktionen erweitert. In Szenario 1 nehmen die Knoten regelmäßige Messungen vor. Sobald der Event sendToMaster ausgelöst wird lesen die Knoten ihre bisher gesammelten Messwerte aus und leeren den Speicher. Die Messdaten werden dann anhand der Routingtabelle zum Masterknoten gesendet. Die Knoten gehen in regelmäßigen Intervallen in den Schlafmodus und wachen ebenfalls regelmäßig wieder auf. In den Wachphasen kann dann der Event sendToMaster ausgeführt werden. Es findet die Kommunikation zwischen den Knoten statt und nach einer gewissen Zeit gehen alle Knoten wieder in den Schlafmodus zurück.
+
+\paragraph{Für Szenario 2} werden drei verschiedene Application-Layer definiert. Zum einen der MasterClusterAppl, welcher von der CustomDiceApplication erbt. Dieser Application-Layer wird im Master-Knoten des Netzwerkes implementiert. Es gibt also nur einen Knoten pro Netzwerk mit dem MasterClusterAppl.\\
+Der ClusterMasterClusterAppl wird dem Master innerhalb des jeweiligen Clusters zugewiesen. Dieser erbt von CustomMatrixApplication. Er steuert das Verhalten des ApplicationClustering. Er kann die Knoten des Clusters wecken. Deren Energieladezustand anfordern und Messungen in den Knoten delegieren.\\
+In allen Knoten die weder der Netzwerk-Master noch einer der Cluster-Master wird der LeafClusterAppl verwendet, welcher ebenfalls von CustomMatrixApplication erbt.   Dieser hört auf Pakete vom Cluster-Master und gibt seinen Energieladezustand und Messwerte an diesen, falls diese angefordert werden.
+
+\chapter{Testanwendungen}
+Es sollten zwei verschiedene Testanwendungen implementiert werden. Diese sollten zum Beispiel Energieverbrauch, Netzwerklebenszeit und ausgefallene Knoten unter verschiedenen Bedingungen erfassen.\\
+\section{Szenario 1}
+In der ersten Anwendung sollten die Sensorknoten in regelmäßigen Intervallen Messungen mit den jeweils vorhandenen Sensoren durchführen. Dabei sollte zu den entsprechenden Zeitpunkten jeder Knoten alle seine Messwerte erfassen und diese über einen einfachen Routingalgorithmus wie zum Beispiel eine Baumstruktur an die Datensenke übermitteln.
+\paragraph{Umsetzung}
+\section{Szenario 2}
+In Anwendung Zwei sollten die Knoten in App-Cluster unterteilt werden. Die Funktionsweise ist in Abschnitt 2.2.2 beschrieben. Es misst also im Vergleich zum ersten Szenario nicht jeder Knoten, sondern es wird pro Cluster jeder Messwert nur einmal pro Zeitpunkt erhoben.
+\paragraph{Umsetzung}
+bla bla bla

@@ -1,0 +1,43 @@
+%======================================================================
+%	Metadaten
+%======================================================================
+%	$Id$
+%	Matthias Kupfer
+%======================================================================
+
+\newcommand{\dcsubject}{Forschungspraktikum}
+% z.B. (Diplom/Studien/Haus)arbeit, Praktikumsbericht, Studie, Beleg, 
+% (Pro/Haupt/Ober)seminar, Seminar usw.
+\newcommand{\dctitle}{Simulation von Sensorknoten mit mehrdimensional
+Clustering in drahtlosen Sensornetzwerken}
+\newcommand{\dcsubtitle}{~} % Untertitel, falls erforderlich
+
+\newcommand{\dcauthorlastname}{Thomas Rückert}
+\newcommand{\dcauthorfirstname}{}
+
+\newcommand{\dcauthoremail}{thomas.rueckert@s2010.tu-chemnitz.de} 
+\newcommand{\dcdate}{\today} 
+
+\newcommand{\dcplace}{Chemnitz} % Ort, kann an der TU meist so bleiben
+\newcommand{\dcuni}{Technische Universität \dcplace}
+\newcommand{\dcdepart}{Fakultät für Informatik} % Fakultätsangabe
+\newcommand{\dcprof}{Professur für Technische Informatik} % Angabe der Professur
+
+\newcommand{\dcpruefer}{Prof. Dr. Wolfram Hardt}% Prüfer der Arbeit
+\newcommand{\dcadvisor}{Dipl.-Inf. Mirko Lippmann}% Betreuer der Arbeit
+
+\newcommand{\dckeywords}{Liste,von,Stichworten,die,als,Schlagworte,geeignet,
+sind}
+
+%%======================================================================
+% Einstellungen des Hyperref-Paketes
+\hypersetup{%    
+	pdftitle	= {\dctitle}, %
+	pdfsubject	= {\dcsubject, \dcdate}, %
+	pdfauthor	= {\dcauthorfirstname~\dcauthorlastname, \dcauthoremail}, %
+	pdfkeywords	= {\dckeywords}, %
+	pdfcreator	= {pdfTeX with Hyperref and Thumbpdf}, %
+	pdfproducer	= {LaTeX, hyperref, thumbpdf}, %
+	% weitere PDF-Einstellungen in hyperref.cfg
+}
+%%======================================================================

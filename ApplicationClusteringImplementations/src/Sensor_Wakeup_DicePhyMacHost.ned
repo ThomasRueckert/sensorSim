@@ -176,10 +176,7 @@ module Sensor_Wakeup_DicePhyMacHost
             @display("p=400,159");
         }
         //--------------- END SENSOR ---------------
-        
-        //--------------- BEGIN WAKEUP ---------------
-		//--------------- END WAKEUP ---------------
-		
+        		
 		//--------------- BEGIN WIRELESSNODE ---------------
     	arp: <arpType> like IBaseArp {
                 @display("p=140,100;i=block/network2");

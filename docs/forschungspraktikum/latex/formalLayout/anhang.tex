@@ -1,0 +1,248 @@
+\part*{Anhang}
+\appendix
+%\include{anhanga}
+
+\section*{Energieoptionen}
+\subsection*{Definitionen}
+
+\paragraph{Aus dem Mixim-Framework} BaseBattery.h - class MIXIM\_API DrawAmount
+
+\begin{minipage}{\textwidth}
+\begin{lstlisting}
+ /* 
+  * [...]
+  * Can be either an instantaneous draw of a certain energy amount
+  * in mWs (type=ENERGY) or a draw of a certain current in mA over
+  * time (type=CURRENT).
+  * [...]
+  */
+class MIXIM_API DrawAmount {
+public:
+	/** @brief The type of the amount to draw.*/
+    enum PowerType {
+	    CURRENT, /** @brief Current in mA over time. */
+	    ENERGY /** @brief Single fixed energy draw in mWs */
+    };
+    [...]
+}
+\end{lstlisting}
+\end{minipage}
+
+CURRENT beschreibt den Ruhestrom eines Bauteils. ENERGY einen Betrag, der bei einer bestimmten Operation verbraucht wird.
+
+\paragraph{Definitionen in SensorTechnology} BatteryAccess.cc - class BatteryAccess
+
+Die Klasse BatteryAccess erbt von MiximBatteryAccess. Die Methoden drawEnergy() und drawCurrent() sind in MiximBatteryAccess definiert. Mit den Methoden changeDrawCurrent() und changeEnergyConsumption() werden können die Energieoptionen für ein Modul verändert werden.
+
+\begin{minipage}{\textwidth}
+\begin{lstlisting}
+void BatteryAccess::draw()
+{
+    consumption.record(energiePerOperation);
+    this->drawEnergy(energiePerOperation, 0);
+}
+void BatteryAccess::changeDrawCurrent(double cur, int acc)
+{
+    overTime.record(cur);
+    this->drawCurrent(cur, acc);
+}
+void BatteryAccess::changeEnergyConsumption(float energy)
+{
+    energiePerOperation = energy;
+}
+\end{lstlisting}
+\end{minipage}
+
+Memory.ned - simple Memory\\
+Es müssen die Werte für currentConsumption und energyConsumption für alle Module mit Anbindung an die Batterie in allen Knoten des Netzwerkes gesetzt werden.
+\begin{itemize}
+\item currentConsumption - in mA over time (type=CURRENT)
+\item energyConsumption - in mWs (type=ENERGY)
+\end{itemize}
+
+\begin{minipage}{\textwidth}
+\begin{lstlisting}
+simple Memory
+{
+    parameters:
+        int storageSize = default(4);
+        @display("i=block/buffer2");
+        double currentConsumption = 100;
+    	double energyConsumption = 3;
+}
+\end{lstlisting}
+\end{minipage}
+
+Die Definition der Werte kann entweder innerhalb des ned-files passieren oder in einem ini-file.
+
+\begin{minipage}{\textwidth}
+\begin{lstlisting}
+#omnetpp.ini
+**.Memory.currentConsumption = 3
+**.Memory.energyConsumption = 100
+\end{lstlisting}
+\end{minipage}
+
+Batterieverbrauch muss definiert werden für die folgenden Bauteile:
+\begin{itemize}
+\item Memory
+\item SensingUnit
+\item SignalConditioner
+\item SignalConverter
+\item Transducer
+\item Processor
+\end{itemize}
+
+\paragraph{Besonderheit des Prozessors}
+
+Der Prozessor kann 3 verschiedene Energiemodi einnehmen und zyklisch zwischen diesen Wechseln. Verbrauch in diesen Phasen kann beliebig definiert werden. Per default werden für alle 3 Phasen die gleichen Werte für den Verbrauch gesetzt. Diese müssen in currentConsumptionNormal und energyConsumptionNormal definiert werden.
+
+\begin{minipage}{\textwidth}
+\begin{lstlisting}
+#simple Processor
+//NORMAL mode
+double currentConsumptionNormal;
+double energyConsumptionNormal;
+//POWER_SAVING mode
+double currentConsumptionPowerSaving = default(currentConsumptionNormal);
+double energyConsumptionPowerSaving  = default(energyConsumptionNormal);
+//HIGH_PERFORMANCE mode
+double currentConsumptionHighPerformance  = default(currentConsumptionNormal);
+double energyConsumptionHighPerformance  = default(energyConsumptionNormal);
+\end{lstlisting}
+\end{minipage}
+
+Der Verbrauch in den restlichen Modulen kann ebenfalls den 3 Phasen angepasst werden. Dazu können die folgenden 3 Werte definiert werden, welche standardmäßig auf 1 gesetzt sind. Faktor 1 bedeutet es gibt keine Veränderung. Die Werte symbolisieren einen Faktor, der mit den gesetzten Werten für currentConsumption und energyConsumption multipliziert wird. Also senkt ein Wert kleiner 1 und erhöht ein Wert größer 1 den gewählten Verbrauch.
+
+\begin{minipage}{\textwidth}
+\begin{lstlisting}
+#module SensorNode
+double normalRatio = default(1);
+double powerSavingRatio = default(1);
+double highPerformanceRatio = default(1);
+\end{lstlisting}
+\end{minipage}
+
+\subsection*{Beispiele}
+
+\paragraph{Batterie}
+
+\begin{minipage}{\textwidth}
+\begin{lstlisting}
+#Definiert die Kapazitaet der Batterie in allen Bauteilen
+**.battery.nominal = 1000mAh
+\end{lstlisting}
+\end{minipage}
+
+\paragraph{Verbrauch}
+
+Den Verbrauch für des Bauteil in jedem Knoten auf den gleichen Wert setzen:
+
+\begin{minipage}{\textwidth}
+\begin{lstlisting}
+**.currentConsumption = x
+**.energyConsumption = y
+\end{lstlisting}
+\end{minipage}
+
+Den Verbrauch für des Bauteil in jedem Knoten auf den gleichen Wert setzen, nur für den Speicher wird ein anderer Wert definiert. Dabei muss die spezielle Definition vor der allgemeinen Definition stehen, sonst wird der gesetzt Wert für den Memory ignoriert.
+
+\begin{minipage}{\textwidth}
+\begin{lstlisting}
+
+**.Memory.currentConsumption = a
+**.Memory.energyConsumption = b
+
+**.currentConsumption = x1
+**.energyConsumption = y1
+\end{lstlisting}
+\end{minipage}
+
+Der Verbrauch kann auch für jeden einzelnen Sensor, jedes Bauteil eines bestimmten Sensors oder jeden Knoten einzeln definiert. Ein paar Beispiele dazu sind im folgenden Listing gegeben.
+
+\begin{minipage}{\textwidth}
+\begin{lstlisting}
+
+#genau ein Bauteil (SensingUnit) des Temperatursensor des Sensornode0 
+#im Netzwerk Network
+Network.Sensornode0.TemperatureSensor.SensingUnit.currentConsumption = g
+Network.Sensornode0.TemperatureSensor.SensingUnit.energyConsumption = h
+
+#genau ein Bauteil (SensingUnit) des Temperatursensor des Sensornode0 
+#in allen verfuegbaren Netzwerken
+**.Sensornode0.TemperatureSensor.SensingUnit.currentConsumption = e
+**.Sensornode0.TemperatureSensor.SensingUnit.energyConsumption = f
+
+#Verbrauch aller Bauteile des Temperatursensors in allen Knoten in 
+#allen Netzwerken
+**.TemperatureSensor.**.currentConsumption = c1
+**.TemperatureSensor.**.energyConsumption = d1
+
+#nur der Verbrauch der SensingUnit des Temperatursensors in allen Knoten
+**.TemperatureSensor.SensingUnit.currentConsumption = c
+**.TemperatureSensor.SensingUnit.energyConsumption = d
+
+#der Verbrauch aller SensingUnits in allen Sensoren aller Knoten
+**.SensingUnit.currentConsumption = a
+**.SensingUnit.energyConsumption = b
+
+**.currentConsumption = x1
+**.energyConsumption = y1
+\end{lstlisting}
+\end{minipage}
+
+\paragraph{Prozessor}
+Verbrauch im Prozessor für die 3 verschiedenen Phasen.\\
+\begin{minipage}{\textwidth}
+\begin{lstlisting}
+#Processor
+**.Processor.currentConsumptionNormal = 3
+**.Processor.energyConsumptionNormal = 200
+
+**.Processor.currentConsumptionPowerSaving = 3
+**.Processor.energyConsumptionPowerSaving = 150
+
+**.Processor.currentConsumptionHighPerformance = 3
+**.Processor.energyConsumptionHighPerformance = 250
+
+**.normalRatio = 1.0
+**.powerSavingRatio = 0.1 #niedriger Verbrauch in den Modulen
+**.highPerformanceRatio = 1.5 #erhoehter Verbrauch in den Modulen
+\end{lstlisting}
+\end{minipage}
+
+Minimal nötige Definition für den Prozessor. Hier wird der Energieverbrauch beim Wechsel der Phasen nicht verändert.\\
+\begin{minipage}{\textwidth}
+\begin{lstlisting}
+#Processor
+**.Processor.currentConsumptionNormal = 3
+**.Processor.energyConsumptionNormal = 100
+\end{lstlisting}
+\end{minipage}
+
+\section*{Statistiken}
+
+Um statistische Daten während der Simulation zu speichern müssen verschiedene Parameter im ini-file gesetzt werden:
+
+\begin{itemize}
+\item record-eventlog
+\item **.*.vector-recording
+\item **.*.scalar-recording
+\end{itemize}
+
+Alle 3 Werte sind booleans. Wenn sie auf true gesetzt sind, dann werden die entsprechenden Daten gespeichert. Für die Skalaren und Vektoren können die Speicherorte wie folgt definiert werden:
+
+\begin{itemize}
+\item output-scalar-file = results/scalars1.sca
+\item output-vector-file = results/vectors1.vec
+\end{itemize}
+
+Mit der gezeigten Beispielkonfiguration werden relativ zum Projektpfad im Ordner results die folgenden Dateien mit statistischen Daten erstellt:
+
+\begin{itemize}
+\item General-0.elog
+\item scalars1.sca
+\item vectors1.vec
+\end{itemize}
+
+Innerhalb der Skalaren und Vektoren kann im Tab `Browse Data` (unten) aus allen ermittelten Werten gewählt werden. Markierte Werte können mit Rechtsklick->`Plot` in einen Graphen verarbeitet werden. Innerhalb des Charts kann per Rechtsklick->`Properties` der Graph bearbeitet werden.

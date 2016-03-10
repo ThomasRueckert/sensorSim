@@ -75,9 +75,9 @@ module SensorNode extends WirelessNodeBatteryPlusTran like SensorNodeInterface
         battery.publishDelta = default(1);
         battery.publishTime = default(battery.resolution);
         
-        double normalRatio;
-		double powerSavingRatio;
-		double highPerformanceRatio;
+        double normalRatio = default(1);
+		double powerSavingRatio = default(1);
+		double highPerformanceRatio = default(1);
 
     submodules:
         TemperatureSensor: TemperatureSensor if hasTemperatureSensor {

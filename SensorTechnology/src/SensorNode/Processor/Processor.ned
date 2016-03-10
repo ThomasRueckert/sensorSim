@@ -36,11 +36,11 @@ simple Processor
         double currentConsumptionNormal;
     	double energyConsumptionNormal;
     	//POWER_SAVING mode
-        double currentConsumptionPowerSaving;
-    	double energyConsumptionPowerSaving;
+        double currentConsumptionPowerSaving = default(currentConsumptionNormal);
+    	double energyConsumptionPowerSaving  = default(energyConsumptionNormal);
     	//HIGH_PERFORMANCE mode
-        double currentConsumptionHighPerformance;
-    	double energyConsumptionHighPerformance;
+        double currentConsumptionHighPerformance  = default(currentConsumptionNormal);
+    	double energyConsumptionHighPerformance  = default(energyConsumptionNormal);
 	gates:
 	    //dynamically created gates (once for every sensor on the node):
 
