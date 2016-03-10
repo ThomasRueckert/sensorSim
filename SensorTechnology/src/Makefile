@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for libSensorTechnology
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep --make-so -O out -I../../MiXiM/src/base/phyLayer -I../../MiXiM/src -I../../MiXiM/src/modules/analogueModel -I../../MiXiM/src/base -I../../MiXiM/src/inet_stub/mobility -I../../MiXiM/src/base/modules -I../../MiXiM/src/inet_stub/base -I../../MiXiM/src/base/messages -I../../MiXiM/src/modules/messages -I../../MiXiM/src/modules/netw -I../../MiXiM/src/modules/utility -I../../MiXiM/src/base/utils -I../../MiXiM/src/modules -I../../MiXiM/src/modules/phy -I../../MiXiM/src/modules/power/battery -I../../MiXiM/src/inet_stub/util -I../../MiXiM/src/inet_stub/linklayer/contract -I../../MiXiM/src/base/connectionManager -I../../MiXiM/src/inet_stub/mobility/models -I../../MiXiM/src/inet_stub/networklayer/common -L../../MiXiM/out/$$\(CONFIGNAME\)/src -lmixim -DMIXIM_INET=1 -KMIXIM_PROJ=../../MiXiM
+#  opp_makemake -f --deep --make-so -O out -I../../MiXiM/src/base/modules -I../../MiXiM/src -I../../MiXiM/src/base/utils -I../../MiXiM/src/modules/power/battery -I../../MiXiM/src/base -I../../MiXiM/src/inet_stub/mobility/models -I../../MiXiM/src/modules/phy -I../../MiXiM/src/inet_stub/mobility -I../../MiXiM/src/base/connectionManager -I../../MiXiM/src/inet_stub/base -I../../MiXiM/src/modules/netw -I../../MiXiM/src/inet_stub/networklayer/common -I../../MiXiM/src/modules/utility -I../../MiXiM/src/base/phyLayer -I../../MiXiM/src/inet_stub/util -I../../MiXiM/src/modules/analogueModel -I../../MiXiM/src/modules/messages -I../../MiXiM/src/inet_stub/linklayer/contract -I../../MiXiM/src/base/messages -I../../MiXiM/src/modules -L../../MiXiM/out/$$\(CONFIGNAME\)/src -lmixim -DMIXIM_INET=1 -KMIXIM_PROJ=../../MiXiM
 #
 
 # Name of target to be created (-o option)
@@ -10,26 +10,26 @@ TARGET = libSensorTechnology$(SHARED_LIB_SUFFIX)
 
 # C++ include paths (with -I)
 INCLUDE_PATH = \
-    -I../../MiXiM/src/base/phyLayer \
-    -I../../MiXiM/src \
-    -I../../MiXiM/src/modules/analogueModel \
-    -I../../MiXiM/src/base \
-    -I../../MiXiM/src/inet_stub/mobility \
     -I../../MiXiM/src/base/modules \
-    -I../../MiXiM/src/inet_stub/base \
-    -I../../MiXiM/src/base/messages \
-    -I../../MiXiM/src/modules/messages \
-    -I../../MiXiM/src/modules/netw \
-    -I../../MiXiM/src/modules/utility \
+    -I../../MiXiM/src \
     -I../../MiXiM/src/base/utils \
-    -I../../MiXiM/src/modules \
-    -I../../MiXiM/src/modules/phy \
     -I../../MiXiM/src/modules/power/battery \
-    -I../../MiXiM/src/inet_stub/util \
-    -I../../MiXiM/src/inet_stub/linklayer/contract \
-    -I../../MiXiM/src/base/connectionManager \
+    -I../../MiXiM/src/base \
     -I../../MiXiM/src/inet_stub/mobility/models \
+    -I../../MiXiM/src/modules/phy \
+    -I../../MiXiM/src/inet_stub/mobility \
+    -I../../MiXiM/src/base/connectionManager \
+    -I../../MiXiM/src/inet_stub/base \
+    -I../../MiXiM/src/modules/netw \
     -I../../MiXiM/src/inet_stub/networklayer/common \
+    -I../../MiXiM/src/modules/utility \
+    -I../../MiXiM/src/base/phyLayer \
+    -I../../MiXiM/src/inet_stub/util \
+    -I../../MiXiM/src/modules/analogueModel \
+    -I../../MiXiM/src/modules/messages \
+    -I../../MiXiM/src/inet_stub/linklayer/contract \
+    -I../../MiXiM/src/base/messages \
+    -I../../MiXiM/src/modules \
     -I. \
     -IExtendedMessage \
     -ISensorNetworkInterface \

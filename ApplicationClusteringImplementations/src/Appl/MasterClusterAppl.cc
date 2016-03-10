@@ -53,7 +53,7 @@ void MasterClusterAppl::initialize(int stage) {
         INITIAL_DELAY = 5; // initial delay before sending first packet
 
         delayTimer = new cMessage("app-delay-timer");
-        clusterApp->sleepTimeout = 1000;
+        clusterApp->sleepTimeout = 10000;
         clusterApp->myNodeId = NetwLayer->getMyNetworkAddress();
         clusterApp->coordinatorNodeId = LAddress::L3Type(par("coordinatorNodeAddr").longValue());
 
@@ -122,7 +122,8 @@ void MasterClusterAppl::handleMessage(cMessage * msg)
 
             //nextDice = 0;
             debugEV << "  processing application timer." << endl;
-            scheduleAt(simTime() + measureTimerIntervall + uniform(0, 0.001), delayTimer);
+            simtime_t t = simTime() + measureTimerIntervall + uniform(0, 0.001);
+            scheduleAt(simTime() + measureTimerIntervall /*+ uniform(0, 0.001)*/, delayTimer);
         }
     }
     else if (msg->getArrivalGateId() == dataIn)

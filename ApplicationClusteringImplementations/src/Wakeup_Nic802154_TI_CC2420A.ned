@@ -59,9 +59,10 @@ module Wakeup_Nic802154_TI_CC2420A like IWirelessNicUpperCtrl
                 
         // power consumption from boards (at 3.3V)
         double setupWakeupCurrent @unit(mA) = 0.1mA; // 0.021 µA
-        double wakeupCurrent @unit(mA) = 0.1mA; // 0.021 µA
-        //sleepCurrent         = 0.000021mA; // 0.021 µA
-        sleepCurrent         = 0.1mA;
+//        double wakeupCurrent @unit(mA) = 0.1mA; // 0.021 µA
+        double wakeupCurrent @unit(mA) = 100mA; // 0.021 µA
+//        sleepCurrent         = 0.000021mA; // 0.021 µA
+        sleepCurrent         = 21mA; // 0.021 µA
         rxCurrent            = 18.8 mA;
         decodingCurrentDelta = 0 mA;
         txCurrent            = 17.4 mA;

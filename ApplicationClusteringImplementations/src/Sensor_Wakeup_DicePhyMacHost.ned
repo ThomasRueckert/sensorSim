@@ -34,6 +34,8 @@ import org.mixim.base.modules.IBaseArp;
 import org.mixim.base.modules.IBaseApplLayer;
 import org.mixim.base.modules.IBaseNetwLayer;
 
+import wakeuprecv.WakeupWirelessNicBattery;
+
 //
 // compound module for a sensor node with wakeup receiver using the DicePhyMacHost
 // this module is similar to the DicePhyMacHost (but wakeup and sensor functionality is added)

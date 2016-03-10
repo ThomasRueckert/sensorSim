@@ -396,11 +396,12 @@ void CustomWiseRoute::handleLowerMsg(cMessage* msg) {
             wuPkt->setName("WakeUpReceiverPacket");
             NetwControlInfo::setControlInfo(wuPkt, LAddress::L3BROADCAST);
 
-            EV << "-------------------- I am NODE " << myNetwAddr << ". FORWARDING WakeUpReceiverPacket." << endl;
-
             if (LAddress::isL3Broadcast(finalDestAddr)) {
                 //pkt->setFinalDestAddr();
                 //NetwControlInfo::setControlInfo(copyPkt, LAddress::L3BROADCAST);
+
+                EV << "-------------------- I am NODE " << myNetwAddr << ". FORWARDING WakeUpReceiverPacket." << endl;
+
                 forward(wuPkt, srcAddr);
             }
 
@@ -443,11 +444,12 @@ void CustomWiseRoute::handleLowerMsg(cMessage* msg) {
             LAddress::L3Type destAddr = copyPkt->getDestAddr();
             LAddress::L3Type srcAddr = copyPkt->getSrcAddr();
 
-            EV << "-------------------- I am NODE " << myNetwAddr << ". FORWARDING" << " message." << endl;
-
             if (LAddress::isL3Broadcast(finalDestAddr)) {
                 //pkt->setFinalDestAddr();
                 NetwControlInfo::setControlInfo(copyPkt, LAddress::L3BROADCAST);
+
+                EV << "-------------------- I am NODE " << myNetwAddr << ". FORWARDING" << " message." << endl;
+
                 forward(copyPkt, srcAddr);
             }
         }

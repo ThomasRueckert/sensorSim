@@ -53,7 +53,7 @@ void LeafClusterAppl::initialize(int stage) {
         hasPressureSensor = processor->hasPressureSensor;
         hasLightSensor = processor->hasLightSensor;
 
-        clusterApp->sleepTimeout = 3000;
+        clusterApp->sleepTimeout = 10000;
         clusterApp->wakeupSleepEnterSleep();
         findHost()->getDisplayString().setTagArg("i2", 0, "status/red");
 
