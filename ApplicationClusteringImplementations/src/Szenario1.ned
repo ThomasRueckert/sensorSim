@@ -32,69 +32,98 @@ network Szenario1 extends BaseNetwork
         int numNodes; // total number of hosts in the network
         numNodes = 38;
 
-        @display("bgi=background/roomsBigger;bgb=867,430");
+        @display("bgi=background/roomsBigger;bgb=867,553");
         wuType = default("sensortechnology.src.WorldModel.CustomWorldUtility");
-		cmType = default("org.mixim.base.connectionManager.ConnectionManager");
-		
+        cmType = default("org.mixim.base.connectionManager.ConnectionManager");
+
     submodules:
         Node0: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=408,218");
+            @display("p=404,282");
             //hasTemperatureSensor = true;
                     //@class(ApplicationClusteringImplementations);
         }
         Node1: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=311,154");
+            @display("p=404,192");
             //hasTemperatureSensor = true;
+            appl.roomNumber = 0;
         }
         Node2: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=303,64");
+            @display("p=443,123");
             //hasTemperatureSensor = true;
         }
         Node3: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=193,142");
+            @display("p=365,123");
             //hasTemperatureSensor = true;
         }
         Node4: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=241,77");
+            @display("p=404,123");
             //hasTemperatureSensor = true;
         }
         Node5: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=342,296");
+            @display("p=509,282");
             //hasTemperatureSensor = true;
+            appl.roomNumber = 3;
         }
         Node6: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=342,381");
+            @display("p=580,243");
             //hasTemperatureSensor = true;
         }
         Node7: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=232,277");
+            @display("p=580,282");
             //hasTemperatureSensor = true;
         }
         Node8: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=241,373");
+            @display("p=580,321");
             //hasTemperatureSensor = true;
         }
         Node9: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=558,103");
-            //hasTemperatureSensor = true;
+            @display("p=404,377");
+            appl.roomNumber = 2;
+                        //hasTemperatureSensor = true;
         }
         Node10: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=619,172");
+            @display("p=345,452");
             //hasTemperatureSensor = true;
         }
         Node11: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=619,257");
+            @display("p=384,452");
             //hasTemperatureSensor = true;
         }
         Node12: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=558,334");
+            @display("p=423,452");
             //hasTemperatureSensor = true;
         }
         Node13: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=519,218");
+            @display("p=462,452");
+            //hasTemperatureSensor = true;
+
+        }
+        Node14: Sensor_Wakeup_DicePhyMacHost {
+            @display("p=294,282");
+            appl.roomNumber = 1;
             //hasTemperatureSensor = true;
         }
-        
+        Node15: Sensor_Wakeup_DicePhyMacHost {
+            @display("p=209,204");
+            //hasTemperatureSensor = true;
+        }
+        Node16: Sensor_Wakeup_DicePhyMacHost {
+            @display("p=209,243");
+            //hasTemperatureSensor = true;
+        }
+        Node17: Sensor_Wakeup_DicePhyMacHost {
+            @display("p=209,282");
+            //hasTemperatureSensor = true;
+        }
+        Node18: Sensor_Wakeup_DicePhyMacHost {
+            @display("p=209,321");
+            //hasTemperatureSensor = true;
+        }
+        Node19: Sensor_Wakeup_DicePhyMacHost {
+            @display("p=209,360");
+            //hasTemperatureSensor = true;
+        }
+
     connections allowunconnected:
 
     // all connections and gates are to be generated dynamically
