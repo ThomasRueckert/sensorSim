@@ -22,6 +22,9 @@
 #include "vector"
 #include "ApplPkt_m.h"
 
+#include <NoApplicationClusteringAppl.h>
+#include <Szenario3Appl.h>
+
 class CustomWiseRoute : public WiseRoute
 {
 
@@ -72,6 +75,9 @@ protected:
     cArray* MessagesToBeForwarded;
     cMessage* forwardMessagesSelfMsg;
     int sendingIntervall;
+
+    NoApplicationClusteringAppl* appl;
+    Szenario3Appl* appl2;
 
     void sendToNeighbor(cMessage* msg, LAddress::L3Type &finalDestAddr, LAddress::L3Type &nextHopAddr, LAddress::L3Type &initialSrcAddr, LAddress::L3Type &srcAddr);
     void forward(ApplPkt* msg, LAddress::L3Type);

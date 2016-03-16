@@ -20,8 +20,6 @@
 #include <cassert>
 #include <MyTestApplication.h>
 #include <FindModule.h>
-#include <NoApplicationClusteringAppl.h>
-
 #include "NetwControlInfo.h"
 #include "MacToNetwControlInfo.h"
 #include "ArpInterface.h"
@@ -64,9 +62,12 @@ void CustomWiseRoute::initialize(int stage) {
 
         forwardMessagesSelfMsg = new cMessage;
         forwardMessagesSelfMsg->setKind(FORWARD_DELAYED);
-        NoApplicationClusteringAppl* appl = FindModule<NoApplicationClusteringAppl*>::findSubModule(findHost());
+        this->appl = FindModule<NoApplicationClusteringAppl*>::findSubModule(findHost());
+        this->appl2 = FindModule<Szenario3Appl*>::findSubModule(findHost());
         if (appl != NULL) {
             sendingIntervall = appl->par("sendingIntervall");
+        } else if (appl2 != NULL) {
+            sendingIntervall = appl2->par("sendingIntervall");
         }
         if (appl != NULL) {
             //scheduleAt(simTime() + sendingIntervall + 5 + (myNetwAddr*0.1), forwardMessagesSelfMsg);
@@ -232,9 +233,10 @@ void CustomWiseRoute::convertTreeToRouteTable() {
     //routeTree;
     //routeTable;
     //myNetwAddr;
-    NoApplicationClusteringAppl* appl = FindModule<NoApplicationClusteringAppl*>::findSubModule(findHost());
     if (appl != NULL) {
         appl->myNetworkAddr = myNetwAddr;
+    } else if (appl2 != NULL) {
+        appl2->myNetworkAddr = myNetwAddr;
     }
 
     //list of childs of the node i are inside routeTreeAdjList[i]
@@ -246,6 +248,8 @@ void CustomWiseRoute::convertTreeToRouteTable() {
         isLeaf = true;
         if (appl != NULL) {
             appl->iAmLeafNode = true;
+        } else if (appl2 != NULL) {
+            appl2->iAmLeafNode = true;
         }
     } else {
         //proccess the children
@@ -415,8 +419,7 @@ void CustomWiseRoute::handleLowerMsg(cMessage* msg) {
                 EV << "-------------------- I am NODE " << myNetwAddr << ". GOT FORWARDED MESSAGES AND I AM FINAL RECEIVER." << endl;
             } else {
                 int index = MessagesToBeForwarded->add(msg);
-                NoApplicationClusteringAppl* appl = FindModule<NoApplicationClusteringAppl*>::findSubModule(findHost());
-                if (appl != NULL) {
+                if (appl != NULL || appl2 != NULL) {
                     cMessage* forwardMsgEvent = new cMessage;
                     forwardMsgEvent->setKind(FORWARD_DELAYED);
 
