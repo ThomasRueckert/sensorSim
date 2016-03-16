@@ -114,7 +114,7 @@ void MasterClusterAppl::handleMessage(cMessage * msg)
             send(wuPacketP, dataOut);
             //sendDown(gPacketP);
             //wait some ms
-            scheduleAt(simTime() + 0.05 + uniform(0, 0.001), delayTimer);
+            scheduleAt(simTime() + 0.5 + uniform(0, 0.001), delayTimer);
         }
         else
         {
