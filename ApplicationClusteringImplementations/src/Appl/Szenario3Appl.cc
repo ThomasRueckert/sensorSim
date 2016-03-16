@@ -49,7 +49,7 @@ void Szenario3Appl::initialize(int stage) {
         coordinatorNodeAddr = par("coordinatorNodeAddr");
         sendSensorDataToMasterIntervall = par("sendingIntervall");
 
-        clusterApp->sleepTimeout = 1000;
+        clusterApp->sleepTimeout = 5000;
     }
     if (stage == 1) {
 
@@ -59,7 +59,7 @@ void Szenario3Appl::initialize(int stage) {
             //selfmessage sendToMaster init
             sendToMaster = new cMessage("sendToMaster");
             //nodes should send one after another and not all at the same time so the receiver can receive all messages correctly
-            scheduleAt(simTime() + sendSensorDataToMasterIntervall + 0.02 + (0.02 * myNetworkAddr), sendToMaster);
+            scheduleAt(simTime() + sendSensorDataToMasterIntervall + 1 + (0.02 * myNetworkAddr), sendToMaster);
         }
 
         //memory
@@ -68,11 +68,21 @@ void Szenario3Appl::initialize(int stage) {
         //wakeup interval
         INITIAL_DELAY = par("wakeupIntervall");
         cancelEvent(delayTimer);
-        scheduleAt(simTime() + INITIAL_DELAY, delayTimer);
+        scheduleAt(simTime() + INITIAL_DELAY + (0.02 * myNetworkAddr), delayTimer);
     }
 }
 
 void Szenario3Appl::handleMessage(cMessage* msg) {
+
+    WakeUpPacket* w =  dynamic_cast<WakeUpPacket*>(msg);
+    if (w!=0)
+    {
+        if (clusterApp->isInSleepMode) clusterApp->wakeupSleepLeaveSleep();
+        findHost()->getDisplayString().setTagArg("i2", 0, "status/green");
+        delete msg;
+        return;
+    }
+
     if (strcmp("sensor data", msg->getName()) == 0) {
         EV << "thats it" << endl;
     }
@@ -155,16 +165,35 @@ void Szenario3Appl::handleMessage(cMessage* msg) {
         }
         else if (msg == delayTimer)
         {
-            clusterApp->wakeupSleepLeaveSleep();
-            findHost()->getDisplayString().setTagArg("i2", 0, "status/green");
+            if (iAmLeafNode) {
+                clusterApp->wakeupSleepLeaveSleep();
+                findHost()->getDisplayString().setTagArg("i2", 0, "status/green");
 
-            //matrixEvent();
-            ev << "  processing application timer." << endl;
-            if (!delayTimer->isScheduled())
-            {
-                scheduleAt(simTime() + INITIAL_DELAY + uniform(0, 0.001), delayTimer);
+                if (clusterApp->otherNodesInSleepMode)
+                {
+                    clusterApp->otherNodesInSleepMode = false;
+                    //Send WakeUp-Packet
+                    debugEV << "  start wakeup" << endl;
+                    WakeUpPacket* wuPacketP = new WakeUpPacket();
+                    wuPacketP->setDestAddr(LAddress::L3BROADCAST);
+                    wuPacketP->setName("WakeUpReceiverPacket");
+                    NetwControlInfo::setControlInfo(wuPacketP, LAddress::L3BROADCAST);
+                    send(wuPacketP, dataOut);
+                    //sendDown(gPacketP);
+                    //wait some ms
+                    scheduleAt(simTime() + INITIAL_DELAY + uniform(0, 0.001), delayTimer);
+                }
+                else
+                {
+                    //matrixEvent();
+                    ev << "  processing application timer." << endl;
+
+                }
+
             }
+
             return;
+
         }
         else if ((msg->getArrivalGateId() == dataIn) || (msg->isSelfMessage()==1))
         {
