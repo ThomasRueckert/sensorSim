@@ -5,24 +5,26 @@
 \contentsline {chapter}{\numberline {2}Implementierung}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Hardware}{3}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Sensorik}{3}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Wakeupreceiver}{3}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}Transportlayer}{4}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Baum}{4}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Application Clustering}{4}{subsection.2.2.2}
-\contentsline {section}{\numberline {2.3}Applicationlayer}{4}{section.2.3}
-\contentsline {paragraph}{\nonumberline F\IeC {\"u}r Szenario 1}{4}{section*.5}
-\contentsline {paragraph}{\nonumberline F\IeC {\"u}r Szenario 2}{4}{section*.6}
-\contentsline {chapter}{\numberline {3}Testanwendungen}{5}{chapter.3}
-\contentsline {section}{\numberline {3.1}Szenario 1}{5}{section.3.1}
-\contentsline {paragraph}{\nonumberline Umsetzung}{5}{section*.7}
-\contentsline {section}{\numberline {3.2}Szenario 2}{5}{section.3.2}
-\contentsline {paragraph}{\nonumberline Umsetzung}{5}{section*.8}
-\contentsline {chapter}{\numberline {4}Auswertung}{7}{chapter.4}
-\contentsline {chapter}{\numberline {5}Zusammenfassung}{9}{chapter.5}
-\contentsline {chapter}{\nonumberline Literatur- und Webverzeichnis}{11}{chapter*.9}
-\contentsline {paragraph}{\nonumberline Aus dem Mixim-Framework}{17}{section*.15}
-\contentsline {paragraph}{\nonumberline Definitionen in SensorTechnology}{17}{section*.16}
-\contentsline {paragraph}{\nonumberline Besonderheit des Prozessors}{19}{section*.17}
-\contentsline {paragraph}{\nonumberline Batterie}{20}{section*.19}
-\contentsline {paragraph}{\nonumberline Verbrauch}{20}{section*.20}
-\contentsline {paragraph}{\nonumberline Prozessor}{21}{section*.21}
+\contentsline {subsection}{\numberline {2.1.2}Wakeupreceiver}{4}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Transportlayer}{5}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}CustomWiseRoute - Baum}{5}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}ClusterApplWiseRoute - Application Clustering}{7}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Applicationlayer}{7}{section.2.3}
+\contentsline {paragraph}{\nonumberline F\IeC {\"u}r Szenario 1}{7}{section*.5}
+\contentsline {paragraph}{\nonumberline F\IeC {\"u}r Szenario 2}{7}{section*.6}
+\contentsline {paragraph}{\nonumberline F\IeC {\"u}r Szenario 3}{8}{section*.7}
+\contentsline {chapter}{\numberline {3}Testanwendungen}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Szenario 1}{9}{section.3.1}
+\contentsline {paragraph}{\nonumberline Umsetzung}{9}{section*.8}
+\contentsline {section}{\numberline {3.2}Szenario 2}{11}{section.3.2}
+\contentsline {paragraph}{\nonumberline Umsetzung}{11}{section*.9}
+\contentsline {section}{\numberline {3.3}Szenario 3}{11}{section.3.3}
+\contentsline {paragraph}{\nonumberline Umsetzung}{11}{section*.10}
+\contentsline {chapter}{\numberline {4}Zusammenfassung}{13}{chapter.4}
+\contentsline {chapter}{\nonumberline Literatur- und Webverzeichnis}{15}{chapter*.11}
+\contentsline {paragraph}{\nonumberline Aus dem Mixim-Framework}{21}{section*.17}
+\contentsline {paragraph}{\nonumberline Definitionen in SensorTechnology}{21}{section*.18}
+\contentsline {paragraph}{\nonumberline Besonderheit des Prozessors}{23}{section*.19}
+\contentsline {paragraph}{\nonumberline Batterie}{24}{section*.21}
+\contentsline {paragraph}{\nonumberline Verbrauch}{24}{section*.22}
+\contentsline {paragraph}{\nonumberline Prozessor}{25}{section*.23}

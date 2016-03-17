@@ -1,3 +1,29 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{Mixim}
+{\em Mixim}.
+\newblock Online unter \url{http://mixim.sourceforge.net/}; zuletzt besucht am
+  17. März 2016.
+
+\bibitem{omnet}
+{\em Omnet++}.
+\newblock Online unter \url{https://omnetpp.org/}; zuletzt besucht am 17. März
+  2016.
+
+\bibitem{omnetman}
+{\em Omnet++ Manual}.
+\newblock Online unter \url{https://omnetpp.org/doc/omnetpp/manual/usman.html};
+  zuletzt besucht am 17. März 2016.
+
+\bibitem{omnet45}
+{\em Omnet++ Version 4.5}.
+\newblock Online unter
+  \url{https://omnetpp.org/component/jdownloads/download/32-release-older-versions/2289-omnet-4-5-win32-source-ide-mingw-zip};
+  zuletzt besucht am 17. März 2016.
+
+\bibitem{st}
+{\em SensorTechnology}.
+\newblock Online unter \url{https://github.com/ThomasRueckert/sensorSim};
+  zuletzt besucht am 17. März 2016.
 
 \end{thebibliography}

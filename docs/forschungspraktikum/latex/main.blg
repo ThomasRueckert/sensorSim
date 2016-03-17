@@ -4,46 +4,65 @@ The top-level auxiliary file: main.aux
 A level-1 auxiliary file: meta/metadaten.aux
 The style file: gerplain.bst
 Database file #1: bib/literatur.bib
-Warning--I didn't find a database entry for "applc"
-You've used 0 entries,
+Warning--to sort, need author or key in Mixim
+Warning--to sort, need author or key in st
+Warning--to sort, need author or key in omnet
+Warning--to sort, need author or key in omnetman
+Warning--to sort, need author or key in omnet45
+Warning--empty author in Mixim
+Warning--empty booktitle in Mixim
+Warning--empty year in Mixim
+Warning--empty author in omnet
+Warning--empty booktitle in omnet
+Warning--empty year in omnet
+Warning--empty author in omnetman
+Warning--empty booktitle in omnetman
+Warning--empty year in omnetman
+Warning--empty author in omnet45
+Warning--empty booktitle in omnet45
+Warning--empty year in omnet45
+Warning--empty author in st
+Warning--empty booktitle in st
+Warning--empty year in st
+You've used 5 entries,
             2343 wiz_defined-function locations,
-            544 strings with 4634 characters,
-and the built_in function-call counts, 20 in all, are:
-= -- 0
-> -- 0
+            559 strings with 5252 characters,
+and the built_in function-call counts, 1072 in all, are:
+= -- 85
+> -- 5
 < -- 0
-+ -- 0
++ -- 5
 - -- 0
-* -- 2
-:= -- 9
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
+* -- 82
+:= -- 126
+add.period$ -- 10
+call.type$ -- 5
+change.case$ -- 10
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
+cite$ -- 25
+duplicate$ -- 70
+empty$ -- 146
 format.name$ -- 0
-if$ -- 1
+if$ -- 251
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 3
+int.to.str$ -- 5
+missing$ -- 5
+newline$ -- 23
 num.names$ -- 0
-pop$ -- 0
+pop$ -- 50
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 10
 quote$ -- 0
-skip$ -- 1
+skip$ -- 40
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
+substring$ -- 25
+swap$ -- 10
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
-warning$ -- 0
+type$ -- 20
+warning$ -- 20
 while$ -- 0
-width$ -- 0
-write$ -- 2
-(There was 1 warning)
+width$ -- 6
+write$ -- 37
+(There were 20 warnings)
