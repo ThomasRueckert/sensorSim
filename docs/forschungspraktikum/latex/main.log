@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.11.23)  17 MAR 2016 16:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.11.23)  31 MAR 2016 15:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1078,6 +1078,12 @@ Overfull \hbox (3.92638pt too wide) in paragraph at lines 30--32
 de-nen der Ener-gie-ver-brauch
  []
 
+
+Overfull \hbox (6.63623pt too wide) in paragraph at lines 30--32
+\T1/aer/m/n/12 keup_Nic802154_TI_CC2420A ent-hält die kom-plet-te De-fi-ni-ti-o
+n des Wake-up-Receivers.
+ []
+
 <img/wakeupnic.png, id=165, 262.9825pt x 233.87375pt>
 File: img/wakeupnic.png Graphic file (type png)
  <use img/wakeupnic.png>
@@ -1102,12 +1108,6 @@ Package pdftex.def Info: img/tree.png used on input line 66.
 Overfull \hbox (2.41399pt too wide) in paragraph at lines 77--80
 \T1/aer/m/n/12 Mas-ter-Clus-te-rAppl, wel-cher von der Cu-stom-Di-ce-App-li-ca-
 ti-on erbt. Die-ser Application-
- []
-
-
-Overfull \hbox (2.19759pt too wide) in paragraph at lines 77--80
-\T1/aer/m/n/12 der Leaf-Clus-te-rAppl ver-wen-det, wel-cher eben-falls von Cu-s
-tom-Ma-tri-xApp-li-ca-ti-on erbt.
  []
 
 [7] [8]
@@ -1301,7 +1301,7 @@ Here is how much of TeX's memory you used:
  16573 multiletter control sequences out of 15000+600000
  50238 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 49i,11n,68p,963b,3000s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 49i,11n,68p,962b,3000s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Selbstst\344ndigkeitserkl\344rung.0} has been ref
 erenced but does not exist, replaced by a fixed one
 
@@ -1316,7 +1316,7 @@ public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.
 pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/shar
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (34 pages, 417019 bytes).
+Output written on main.pdf (34 pages, 417186 bytes).
 PDF statistics:
  527 PDF objects out of 1000 (max. 8388607)
  461 compressed objects within 5 object streams
